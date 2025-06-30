@@ -1,0 +1,112 @@
+
+            body {
+                font-family: Orbitron, sans-serif;
+                background-image:url(img/reja.jpg);
+                background-size: cover;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                margin: 0;
+            }
+            
+            .login-container {
+                background: linear-gradient(145deg, #3a3a3a,#0a0a0a );
+                padding: 40px;
+                box-shadow: 
+                    0 0 15px rgba(255, 255, 255, 0.1),
+                    0 0 25px rgba(0, 123, 255, 0.2);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                font-family: Orbitron, sans-serif;
+                width: 100%;
+                max-width: 400px;
+            }
+            h1 {
+                text-align: center;
+                color: #f0f0f0;
+                margin-bottom: 30px;
+                font-family: Orbitron, sans-serif;
+            }
+            .form-group {
+                margin-bottom: 20px;
+            }
+            label {
+                display: block;
+                margin-bottom: 8px;
+                color: #f0f0f0;
+                font-weight: bold;
+            }
+            input[type="text"], input[type="password"] {
+                width: 100%;
+                padding: 14px;
+                border: 1px solid #ddd;
+                box-sizing: border-box;
+                font-size: 16px;
+            }
+            input[type="text"]:focus, input[type="password"]:focus {
+                outline: none;
+                border-color: #007bff;
+                box-shadow: 0 0 5px rgba(0,123,255,0.3);
+            }
+            .btn-login {
+              position: relative;
+              width: 100%;
+              padding: 12px;
+              background-color: #535654;
+              color: white;
+              border: none;
+              font-size: 16px;
+              cursor: pointer;
+              overflow: hidden;
+              transition: background-color 0.3s;
+              box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+              font-family: Orbitron, sans-serif;
+              
+            }
+            .btn-login::before{
+                content: "";
+                position: absolute;
+                top: -50%;
+                left: -50%;
+                width: 200%;
+                height: 200%;
+                background: linear-gradient(
+                    120deg,
+                    transparent 0%,
+                    rgba(255, 255, 255, 0.4)50%,
+                    transparent 100%
+                    );
+                transform: rotate(25deg);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                pointer-events: none; 
+            }
+            .btn-login:hover::before{
+                opacity: 1;
+                animation: shimmer 0.8s linear forwards;
+            }
+            .btn-login:hover {
+                background-color: #0a0a0a;
+            }
+            @keyframes shimmer {
+    0% {
+        transform: translateX(-100%) rotate(25deg);
+    }
+    100% {
+        transform: translateX(100%) rotate(25deg);
+    }
+}
+            .error-message {
+                background-color: #f8d7da;
+                color: #721c24;
+                padding: 10px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+                text-align: center;
+                border: 1px solid #f5c6cb;
+            }
+            .login-icon {
+                text-align: center;
+                font-size: 48px;
+                margin-bottom: 20px;
+            }

@@ -1,0 +1,169 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 21 jun. 2025, 10:04:49 p. m.
+    Author     : Lesli
+*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif;
+    background-image: url(img/reja.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    padding: 100px 20px 40px;
+}
+
+/* Header superior */
+.header-box {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header-box h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #f0f0f0;
+}
+
+/* Botón de volver */
+.back-button {
+    position: relative;
+    background-color: transparent;
+    padding: 12px 20px;
+    color: white !important;
+    text-decoration: none;
+    font-size: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #1c1c1c;
+}
+
+.back-button::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%);
+    transform: rotate(25deg);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.back-button:hover::before {
+    opacity: 1;
+    animation: shimmer 0.8s linear forwards;
+}
+
+/* Contenedor de formulario */
+form {
+    max-width: 900px;
+    margin: 160px auto 50px;
+    padding: 30px;
+    background: linear-gradient(145deg, #2c2c2c, #0d0d0d);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
+}
+
+/* Estilo tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+table td {
+    padding: 16px 20px;
+    font-size: 16px;
+    color: white;
+}
+
+/* Primera columna */
+table td:first-child {
+    font-weight: bold;
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* Campos de entrada */
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #111;
+    border: 1px solid #444;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    border-radius: 0;
+    box-sizing: border-box;
+}
+
+/* Botón de enviar */
+input[type="submit"] {
+    margin-top: 30px;
+    padding: 14px 28px;
+    background: linear-gradient(145deg, #2a2a2a, #0c0c0c);
+    color: white;
+    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-family: 'Orbitron', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+input[type="submit"]:hover {
+    background-color: #1c1c1c;
+}
+
+input[type="submit"]::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%);
+    transform: rotate(25deg);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+input[type="submit"]:hover::before {
+    opacity: 1;
+    animation: shimmer 0.8s linear forwards;
+}
+
+/* Efecto shimmer */
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%) rotate(25deg);
+    }
+    100% {
+        transform: translateX(100%) rotate(25deg);
+    }
+}

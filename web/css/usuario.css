@@ -1,0 +1,286 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Orbitron, sans-serif;
+    background-image:url(img/reja.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #ffffff;
+}
+
+.header-box {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header-box h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #f0f0f0;
+}
+
+.back-button {
+    background-color: transparent;
+    padding: 12px 20px;
+    color: white;
+    font-size: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #1c1c1c;
+}
+
+.back-button::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%);
+    transform: rotate(25deg);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.back-button:hover::before {
+    opacity: 1;
+    animation: shimmer 0.8s linear forwards;
+}
+          .main-content {
+    padding-top: 100px;
+}
+
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%) rotate(25deg); }
+    100% { transform: translateX(100%) rotate(25deg); }
+}
+.container {
+    max-width: 1200px;
+    margin: 180px auto 50px auto;
+    padding: 40px;
+    background: linear-gradient(145deg, #2c2c2c, #0d0d0d);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    margin-bottom: 40px;
+}
+
+          .main-content {
+    padding-top: 100px;
+}
+
+.admin-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.admin-header h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.admin-header p {
+    color: #ccc;
+    font-size: 14px;
+}
+
+.message {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 10px 20px;
+    border-left: 5px solid #888;
+    margin-bottom: 20px;
+}
+.message.success {
+    border-color: #28a745;
+}
+.message.error {
+    border-color: #dc3545;
+}
+
+h3 {
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 8px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+form {
+     margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.02);
+}
+.form-group {
+    margin-bottom: 25px;
+}
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+input[type="text"],
+input[type="password"],
+textarea {
+    width: 95%;
+    padding: 12px;
+    background: #111;
+    border: 1px solid #444;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+}
+.password-container {
+    display: flex;
+    align-items: center;
+    width: 95%;
+}
+.password-container input[type="password"] {
+    flex: 1;
+    margin-right: 10px; 
+}
+
+.password-toggle {
+    background: none;
+    border: none;
+    font-size: 18px;
+    margin-left: 10px;
+    cursor: pointer;
+    color: #ccc;
+}
+
+.password-toggle:hover {
+    background-color: #666;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+table th,
+table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: left;
+}
+thead {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+table tbody tr:hover td {
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+.admin-user td {
+    background-color: rgba(255, 255, 255, 0.04);
+    font-style: italic;
+}
+
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: left;
+}
+
+th {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.admin-user td {
+    background-color: transparent;
+    font-weight: bold;
+}
+ .admin-user:hover td {
+    background-color: rgba(0, 123, 255, 0.1); 
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    padding: 12px 24px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Orbitron', sans-serif;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(145deg, #2a2a2a, #0c0c0c);
+    overflow: hidden;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+    margin-top: 10px;
+    z-index: 1;
+}
+
+.btn:hover {
+    background-color: #1c1c1c;
+}
+
+.btn::before {
+   content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%);
+    transform: rotate(25deg);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.btn:hover::before {
+    opacity: 1;
+    animation: shimmer 0.8s linear forwards;
+}
+          .main-content {
+    padding-top: 100px;
+}
+.btn-primary {
+    background-color: #007bff;
+}
+.btn-warning {
+    background-color: #ffc107;
+    color: #ffffff;
+}
+.btn-danger {
+    background-color: #dc3545;
+}
+.btn-secondary {
+    background-color: #6c757d;
+}
+.show-password {
+    color: #888;
+    cursor: pointer;
+    font-size: 13px;
+    margin-top: 6px;
+    display: inline-block;
+}
+.password-display {
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%) rotate(25deg); }
+    100% { transform: translateX(100%) rotate(25deg); }
+

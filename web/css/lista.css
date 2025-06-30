@@ -1,0 +1,148 @@
+ body {
+                font-family: Orbitron, sans-serif;
+                background-image:url(img/reja.jpg);
+                background-size: cover;
+                min-height: 100vh;
+                margin: 0;
+                padding: 40px 20px;
+                padding-top: 80px;
+            }
+            .header-box{
+                background-color: rgba(255, 255, 255, 0.05);
+                padding: 20px 40px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+            }
+            .header-box h1{
+                margin: 0;
+                font-size: 28px;
+                color: #f0f0f0;
+            }
+            .back-button {
+                position: relative;
+                background-color: linear-gradient(145deg, #333333, #111111);
+                padding: 12px 20px;
+                color: white !important;
+                text-decoration: none;
+                font-size: 14px;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                overflow: hidden;
+                transition: background-color 0.3s;
+                margin-left: 20px;
+            }
+            .back-button:hover {
+                background-color: #1c1c1c;
+            }
+            
+            .back-button::before{
+                 content: "";
+                position: absolute;
+                top: -50%;
+                left: -50%;
+                width: 200%;
+                height: 200%;
+                background: linear-gradient(
+                    120deg,
+                    transparent 0%,
+                    rgba(255, 255, 255, 0.4)50%,
+                    transparent 100%
+                    );
+                transform: rotate(25deg);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                pointer-events: none; 
+            }
+            .back-button:hover::before{
+                opacity: 1;
+                animation: shimmer 0.8s linear forwards;
+            }
+     h1{
+        text-align:center;
+        margin-bottom: 40px;
+        font-size: 32px;
+        color: #f0f0f0;
+    }  
+    
+    table
+    {
+        width: 90%;
+        max-width: 1000px;
+        margin: 0 auto 40px auto;
+       border-collapse: collapse;
+       background: linear-gradient(145deg, #3a3a3a, #0a0a0a);
+       box-shadow: 0 0 15px rgba(255,255,255,0.1), 0 0 25px rgba(0,123,255,0.2);
+       border: 1px solid rgba(255,255,255,0.1);
+       overflow: hidden;
+    }   
+    table th,
+    table td{
+        padding: 15px;
+        border:1px solid rgba(255,255,255,0.1);
+        text-align: center;
+        font-size: 16px;
+        
+    }
+    table tr:nth-child(even){
+        background-color: rgba(255,255,255,0.03);
+    }
+    table tr:hover{
+     background-color: rgba(0,123,255, 0.1);   
+    }
+    a{
+        display:inline-block;
+        color: #f0f0f0;
+        background: linear-gradient(145deg,#333333,#111111);
+        text-decoration: none;
+        padding: 8px 14px;
+        margin: 2px;
+        background-color: #111;
+        border:1px solid rgba(255,255,255,255,0.2);
+        transition: background-color 0.3s, box-shadow 0.3s;
+        font-weight: bold;
+        font-size: 14px;
+        position: relative;
+        overflow: hidden;
+       
+    }
+    a:hover{
+        color: white;
+        background-color: #007bff;
+        box-shadow: 0 0 10px rgba(0,123,255,0.4);
+    }
+    a::before{
+                 content: "";
+                position: absolute;
+                top: -50%;
+                left: -50%;
+                width: 200%;
+                height: 200%;
+                background: linear-gradient(
+                    120deg,
+                    transparent 0%,
+                    rgba(255, 255, 255, 0.4)50%,
+                    transparent 100%
+                    );
+                transform: rotate(25deg);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                pointer-events: none; 
+            }
+        a:hover::before{
+            opacity: 1;
+                animation: shimmer 0.6s linear forwards;
+            }   
+    @keyframes shimmer {
+    0% {
+        transform: translateX(-100%) rotate(25deg);
+    }
+    100% {
+        transform: translateX(100%) rotate(25deg);
+    }
+   
