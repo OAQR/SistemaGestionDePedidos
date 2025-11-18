@@ -154,7 +154,7 @@ El sistema no utiliza migraciones automáticas. Debes crear la base de datos y l
 
 1.  **Clona el repositorio:**
     ```bash
-    git clone https://github.com/OAQR/SistemaGestionDePedidos
+    git clone https://github.com/OAQR/SistemaGestionDePedidos.git
     cd SistemaGestionDePedidos
     ```
 2.  **Configura la conexión a la base de datos:**
@@ -228,4 +228,5 @@ Este es un proyecto de portafolio personal y actualmente no se aceptan contribuc
 ## Licencia
 
 Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
+
 
