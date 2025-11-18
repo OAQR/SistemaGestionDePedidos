@@ -154,8 +154,8 @@ El sistema no utiliza migraciones automáticas. Debes crear la base de datos y l
 
 1.  **Clona el repositorio:**
     ```bash
-    git clone <URL_DEL_REPOSITORIO>
-    cd <NOMBRE_DEL_REPOSITORIO>
+    git clone https://github.com/OAQR/SistemaGestionDePedidos
+    cd SistemaGestionDePedidos
     ```
 2.  **Configura la conexión a la base de datos:**
     Los credenciales de la base de datos están **hardcodeados** en el código. Modifica el archivo `src/java/conexion/conexionBD.java` para que apunte a tu base de datos local.
@@ -228,3 +228,4 @@ Este es un proyecto de portafolio personal y actualmente no se aceptan contribuc
 ## Licencia
 
 Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
+
